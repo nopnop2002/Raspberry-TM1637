@@ -14,8 +14,8 @@ I based it on [this](https://github.com/petrows/esp-32-tm1637).
 
 # Software requirement
 WiringPi Library   
-This project uses the wiringPiSPISetup() function to initialize SPI, and use /dev/spidev0.0.   
-If you use it on a board other than the RPI board, you may need to change the SPI device.   
+This project uses the wiringPiSetupGpio() function to initialize GPIO.   
+If you use it on a board other than the RPI board, you may need to change the GPIO number.   
 As far as I know, there are these libraries.   
 - WiringPi for OrangePi   
 - WiringPi for BananaPi   
