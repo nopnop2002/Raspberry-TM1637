@@ -76,9 +76,15 @@ Example of CLK=GPIO14/DIO=GPIO15.
 ./tm1637 -c 14 -d 15
 ```
 
-### Display any text
+### Display any text using default GPIO   
 ```
 ./tm1637 -t "12345 67890"
+```
+
+### Display any text using non-default GPIO   
+Example of CLK=GPIO14/DIO=GPIO15.   
+```
+./tm1637 -c 14 -d 15 -t "12345 67890"
 ```
 
 
