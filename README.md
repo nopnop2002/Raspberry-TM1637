@@ -1,4 +1,4 @@
-# Raspberry-TM1637
+# Raspberry-tm1637
 TM1637 Driver for RaspberryPi.   
 I based it on [this](https://github.com/petrows/esp-32-tm1637).   
 
@@ -65,7 +65,7 @@ optional arguments:
   -t TEXT   Display Text
 ```
 
-### Start Auto Demo
+### Start Auto Demo using default GPIO   
 ```
 ./tm1637
 ```
