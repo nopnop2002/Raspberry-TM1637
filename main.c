@@ -56,7 +56,10 @@ void my_ip_address(char * address) {
 
 
 int main(int argc, char *argv[]) {
-	if(wiringPiSetupGpio() == -1) return 1;
+	if(wiringPiSetupGpio() == -1) {
+		printf("wiringPiSetupGpio Fail\n");
+		return 1;
+	}
 
 	int opt;
 	int clk_gpio = CLK_GPIO;
@@ -97,7 +100,7 @@ int main(int argc, char *argv[]) {
 	// clock & data pin
 	//printf("clk_gpio=%d\n", clk_gpio);
 	//printf("dio_gpio=%d\n", dio_gpio);
-	tm1637_begin(CLK_GPIO, DIO_GPIO);
+	tm1637_begin(clk_gpio, dio_gpio);
 
 	// You can set the brightness level from 0(darkest) till 7(brightest)
 	// BRIGHT_TYPICAL = 2,BRIGHT_DARKEST = 0,BRIGHTEST = 7;

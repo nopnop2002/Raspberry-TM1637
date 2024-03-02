@@ -37,7 +37,7 @@ There are several products with different segments.
 ```
 git clone https://github.com/nopnop2002/Raspberry-tm1637
 cd Raspberry-tm1637
-cc -o tm1637 main.c tm1637.c -lwiringPi
+cc -o tm1637 main.c tm1637.c -lwiringPi -lpthread
 ```
 
 # Wirering
