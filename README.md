@@ -49,7 +49,9 @@ cc -o tm1637 main.c tm1637.c -lwiringPi
 |GND|--|GND||
 |VCC|--|3.3V||
 
-(*1)You can change it to any pin using argument.   
+(*1)   
+The TM1637's interface is similar to I2C, but it is not I2C.   
+Therefore, you can change it to any pin using arguments.   
 
 # How to use
 ```
