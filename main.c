@@ -16,9 +16,9 @@
 void usage() {
 	printf("usage: tm1637  [-c CLK] [-d DIO] [-t TEXT]\n\n");
 	printf("optional arguments:\n");
-	printf("  -c CLK    CLK GPIO\n");
-	printf("  -d DIO    DIO GPIO\n");
-	printf("  -t TEXT   Display Text\n");
+	printf("  -c CLK	CLK GPIO\n");
+	printf("  -d DIO	DIO GPIO\n");
+	printf("  -t TEXT	Display Text\n");
 }
 
 int _isdigit(char *text) {
@@ -69,33 +69,29 @@ int main(int argc, char *argv[]) {
 		switch (opt) {
 		case 'c':
 			//printf("optarg=[%s]\n", optarg);
-            //printf("オプション-cが指定されました。引数は%sです\n", optarg);
 			if (_isdigit(optarg) < 0) {
 				usage();
 				exit(0);
 			}
 			clk_gpio = _isdigit(optarg);
-            break;
+			break;
 		case 'd':
 			//printf("optarg=[%s]\n", optarg);
-            //printf("オプション-dが指定されました。引数は%sです\n", optarg);
 			if (_isdigit(optarg) < 0) {
 				usage();
 				exit(0);
 			}
 			dio_gpio = _isdigit(optarg);
-            break;
+			break;
 		case 't':
 			//printf("optarg=[%s]\n", optarg);
-            //printf("オプション-tが指定されました。引数は%sです\n", optarg);
 			text = optarg;
-            break;
+			break;
 		default:
-            // printf("未知のオプションです\n");
 			usage();
 			exit(0);
-        }
-    }
+		}
+	}
 
 	// clock & data pin
 	//printf("clk_gpio=%d\n", clk_gpio);
