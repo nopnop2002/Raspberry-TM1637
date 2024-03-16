@@ -64,7 +64,7 @@ int main(int argc, char *argv[]) {
 	int opt;
 	int clk_gpio = CLK_GPIO;
 	int dio_gpio = DIO_GPIO;
-	char *text;
+	char *text = NULL;
 	while ((opt = getopt(argc, argv, "c:d:t:")) != -1) {	
 		switch (opt) {
 		case 'c':
@@ -107,7 +107,7 @@ int main(int argc, char *argv[]) {
 		// Get my ip address
 		char ip_address[16];
 		my_ip_address(ip_address);
-		printf("ip_address=[%s]\n", ip_address);
+		//printf("ip_address=[%s]\n", ip_address);
 
 		printf("Start Auto Demo. Cntl+C to stop\n");
 		while(1) {
